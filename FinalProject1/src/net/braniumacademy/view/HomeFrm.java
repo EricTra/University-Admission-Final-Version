@@ -140,7 +140,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("QUẢN LÝ ĐĂNG KÝ MÔN HỌC");
+        setTitle("STUDENT MANAGEMENT SYSTEM");
         setResizable(false);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sort Subjects List", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N

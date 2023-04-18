@@ -50,7 +50,7 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
         btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("THÊM MỚI MÔN HỌC");
+        setTitle("ADD SUBJECT SYSTEM");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,7 +68,6 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("SLOTS:");
 
-        txtSubjectId.setEditable(false);
         txtSubjectId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         txtSubjectName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

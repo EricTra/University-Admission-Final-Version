@@ -79,7 +79,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("THÊM MỚI SINH VIÊN");
+        setTitle("EDIT STUDENT SYSTEM");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

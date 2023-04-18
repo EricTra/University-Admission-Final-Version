@@ -53,7 +53,7 @@ public class EditSubjectDialog extends javax.swing.JDialog implements ActionList
         btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("THÊM MỚI MÔN HỌC");
+        setTitle("EDIT SUBJECT SYSTEM");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
