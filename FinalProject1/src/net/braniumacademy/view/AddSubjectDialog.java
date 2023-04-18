@@ -54,19 +54,19 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Thêm mới môn học");
+        jLabel1.setText("Add new subject");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Mã môn học: ");
+        jLabel2.setText("SUBJECT CODE:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Tên môn học: ");
+        jLabel3.setText("SUBJECT NAME:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Loại môn học: ");
+        jLabel4.setText("PROGRAM:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Số tiết học: ");
+        jLabel5.setText("SLOTS:");
 
         txtSubjectId.setEditable(false);
         txtSubjectId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -76,16 +76,16 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
         txtNumOfLesson.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         comboSubjectType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Đại cương", "Cơ sở ngành", "Chuyên ngành bắt buộc", "Chuyên ngành tự chọn", "Môn học thay thế" }));
+        comboSubjectType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English Preparatory Programme", "F2G", "Supplementary Courses", "UoG" }));
 
         btnAddNew.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAddNew.setText("Thêm mới");
+        btnAddNew.setText("ADD");
 
         btnClear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnClear.setText("Xóa dữ liệu");
+        btnClear.setText("CLEAR");
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCancel.setText("Hủy bỏ");
+        btnCancel.setText("CANCEL");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

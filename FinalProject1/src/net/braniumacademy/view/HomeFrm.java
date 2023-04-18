@@ -143,19 +143,19 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         setTitle("QUẢN LÝ ĐĂNG KÝ MÔN HỌC");
         setResizable(false);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sắp xếp danh sách môn học", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sort Subjects List", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSortSubjectNameASC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortSubjectNameASC.setText("Theo tên a-z");
+        rbSortSubjectNameASC.setText("By Subject Name a-z");
 
         rbSortSubjectNameDESC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortSubjectNameDESC.setText("Theo tên z-a");
+        rbSortSubjectNameDESC.setText("By Subject Name z-a");
 
         rbSortSubjectLessonASC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortSubjectLessonASC.setText("Theo số tiết tăng dần");
+        rbSortSubjectLessonASC.setText("By Slots increase");
 
         rbSortSubjectLessonDESC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortSubjectLessonDESC.setText("Theo số tiết giảm dần");
+        rbSortSubjectLessonDESC.setText("By Slots decrease");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -170,7 +170,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbSortSubjectLessonDESC)
                     .addComponent(rbSortSubjectLessonASC))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,28 +186,33 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm môn học", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search Subjects", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSearchSubjectByName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchSubjectByName.setText("Theo tên gần đúng");
+        rbSearchSubjectByName.setText("By approximate Name");
 
         rbSearchSubjectByNumOfLesson.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchSubjectByNumOfLesson.setText("Theo số tiết học");
+        rbSearchSubjectByNumOfLesson.setText("By number of Slots");
+        rbSearchSubjectByNumOfLesson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbSearchSubjectByNumOfLessonActionPerformed(evt);
+            }
+        });
 
         txtSearchSubjectByName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         btnSearchSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSearchSubject.setText("Tìm");
+        btnSearchSubject.setText("SEARCH");
 
         txtSearchSubjectLessonFrom.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         txtSearchSubjectLessonTo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Đến: ");
+        jLabel1.setText("To:");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Từ:  ");
+        jLabel2.setText("From:");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -230,7 +235,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtSearchSubjectLessonTo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(btnSearchSubject, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSearchSubject)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -260,7 +265,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
             },
             new String [] {
-                "Mã môn học", "Tên môn học", "Tổng số tiết học", "Loại môn học"
+                "Subject Code", "Subject Name", "Total Slots", "Programs"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -274,17 +279,17 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jScrollPane1.setViewportView(tblSubject);
 
         btnRefreshSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRefreshSubject.setText("Làm mới");
+        btnRefreshSubject.setText("REFRESH");
         btnRefreshSubject.setName(""); // NOI18N
 
         btnAddNewSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAddNewSubject.setText("Thêm môn học");
+        btnAddNewSubject.setText("ADD SUBJECT");
 
         btnEditSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnEditSubject.setText("Sửa môn học");
+        btnEditSubject.setText("UPDATE SUBJECT");
 
         btnRemoveSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRemoveSubject.setText("Xóa môn học");
+        btnRemoveSubject.setText("DELETE SUBJECT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -297,7 +302,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(97, 97, 97)
@@ -328,18 +333,18 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                 .addGap(25, 25, 25))
         );
 
-        jTabbedPane1.addTab("QUẢN LÝ MÔN HỌC", jPanel1);
+        jTabbedPane1.addTab("MANAGE SUBJECT", jPanel1);
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sắp xếp danh sách sinh viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sort Students List", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSortStudentNameASC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortStudentNameASC.setText("Theo tên a-z");
+        rbSortStudentNameASC.setText("By Student Name a-z");
 
         rbSortStudentNameDESC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortStudentNameDESC.setText("Theo tên z-a");
+        rbSortStudentNameDESC.setText("By Student Name z-a");
 
         rbSortStudentIdASC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSortStudentIdASC.setText("Theo mã sinh viên a-z");
+        rbSortStudentIdASC.setText("By Student ID a-z");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -364,29 +369,29 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                     .addComponent(rbSortStudentIdASC))
                 .addGap(18, 18, 18)
                 .addComponent(rbSortStudentNameDESC)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm sinh viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search Students", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSearchStudentByName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchStudentByName.setText("Theo tên gần đúng");
+        rbSearchStudentByName.setText("By approximate Name");
 
         rbSearchStudentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchStudentId.setText("Theo mã sinh viên");
+        rbSearchStudentId.setText("By Student ID");
 
         txtSearchStudentName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         btnSearchStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSearchStudent.setText("Tìm");
+        btnSearchStudent.setText("SEARCH");
 
         txtSearchStudentById.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         rbSearchStudentByMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchStudentByMajor.setText("Theo chuyên ngành");
+        rbSearchStudentByMajor.setText("By Program");
 
         comboMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Điện tử", "Viễn thông", "Quản trị kinh doanh", "Khoa học dữ liệu" }));
+        comboMajor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computer Science", "Graphic & Digital Design", "Event Management", "Marketing", "Public Relations & Communications" }));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -395,22 +400,22 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(rbSearchStudentByMajor)
-                        .addGap(18, 18, 18)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(rbSearchStudentId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rbSearchStudentByName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(rbSearchStudentByMajor))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(comboMajor, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rbSearchStudentId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rbSearchStudentByName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(27, 27, 27)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtSearchStudentName, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
                             .addComponent(txtSearchStudentById))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSearchStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(84, 84, 84))))
+                        .addComponent(btnSearchStudent)
+                        .addGap(78, 78, 78))))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,7 +429,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                     .addComponent(rbSearchStudentId)
                     .addComponent(txtSearchStudentById, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearchStudent))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbSearchStudentByMajor)
                     .addComponent(comboMajor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -436,7 +441,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
             },
             new String [] {
-                "Mã sinh viên", "Họ tên", "Ngày sinh", "Địa chỉ", "Email", "Số điện thoại", "Lớp", "Chuyên ngành", "Niên khóa"
+                "Student ID", "Full Name", "Date of Birth", "Address", "Email", "Phone Number", "Class", "Major", "Valid"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -449,26 +454,22 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         });
         jScrollPane2.setViewportView(tblStudent);
         if (tblStudent.getColumnModel().getColumnCount() > 0) {
-            tblStudent.getColumnModel().getColumn(2).setHeaderValue("Ngày sinh");
-            tblStudent.getColumnModel().getColumn(3).setHeaderValue("Địa chỉ");
             tblStudent.getColumnModel().getColumn(4).setResizable(false);
-            tblStudent.getColumnModel().getColumn(4).setHeaderValue("Email");
             tblStudent.getColumnModel().getColumn(5).setResizable(false);
-            tblStudent.getColumnModel().getColumn(5).setHeaderValue("Số điện thoại");
         }
 
         btnRefreshStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRefreshStudent.setText("Làm mới");
+        btnRefreshStudent.setText("REFRESH");
         btnRefreshStudent.setName(""); // NOI18N
 
         btnAddNewStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAddNewStudent.setText("Thêm sinh viên");
+        btnAddNewStudent.setText("ADD STUDENT");
 
         btnEditStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnEditStudent.setText("Sửa sinh viên");
+        btnEditStudent.setText("UPDATE STUDENT");
 
         btnRemoveStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRemoveStudent.setText("Xóa sinh viên");
+        btnRemoveStudent.setText("DELETE STUDENT");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -490,8 +491,8 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jScrollPane2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 580, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -499,11 +500,11 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefreshStudent)
                     .addComponent(btnAddNewStudent)
@@ -512,7 +513,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                 .addGap(25, 25, 25))
         );
 
-        jTabbedPane1.addTab("QUẢN LÝ SINH VIÊN", jPanel2);
+        jTabbedPane1.addTab("MANAGE STUDENT", jPanel2);
 
         btnRefreshRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnRefreshRegistering.setText("Làm mới");
@@ -608,7 +609,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
                                 .addComponent(comboSortRegistering, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 24, Short.MAX_VALUE))))
+                        .addGap(0, 34, Short.MAX_VALUE))))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -704,12 +705,13 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1078, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(449, 449, 449)
-                .addComponent(btnCreateCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1090, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(449, 449, 449)
+                        .addComponent(btnCreateCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -760,6 +762,10 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void rbSearchSubjectByNumOfLessonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSearchSubjectByNumOfLessonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbSearchSubjectByNumOfLessonActionPerformed
 
     /**
      * @param args the command line arguments
