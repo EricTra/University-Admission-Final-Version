@@ -516,7 +516,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jTabbedPane1.addTab("MANAGE STUDENT", jPanel2);
 
         btnRefreshRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRefreshRegistering.setText("Làm mới");
+        btnRefreshRegistering.setText("REFRESH");
         btnRefreshRegistering.setName(""); // NOI18N
 
         tblRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -525,7 +525,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
             },
             new String [] {
-                "Mã sinh viên", "Họ tên sinh viên", "Lớp", "Mã môn", "Tên môn", "Thời gian đăng ký"
+                "Student ID", "Full Name", "Class", "Subject Code", "Subject Name", "Thời gian đăng ký"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -539,40 +539,40 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         jScrollPane3.setViewportView(tblRegistering);
 
         btnAddNewRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAddNewRegistering.setText("Thêm đăng ký");
+        btnAddNewRegistering.setText("ADD REGISRER");
 
         btnRemoveRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRemoveRegistering.setText("Xóa đăng ký");
+        btnRemoveRegistering.setText("DELETE REGISTER");
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm và sắp xếp bảng đăng ký", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search and sort registration table", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSearchReByStudentName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchReByStudentName.setText("Tìm kiếm theo tên sinh viên");
+        rbSearchReByStudentName.setText("Search by student name");
 
         rbSearchReByRegisterTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchReByRegisterTime.setText("Tìm kiếm theo thời gian đăng ký");
+        rbSearchReByRegisterTime.setText("Search by register time");
 
         txtSearchReByStudentName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         btnSearchRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSearchRegistering.setText("Tìm");
+        btnSearchRegistering.setText("SEARCH");
 
         txtSearchReByRegisterTimeFrom.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Sắp xếp theo: ");
+        jLabel3.setText("Sorted by:");
 
         comboSortRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        comboSortRegistering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tên tăng dần a-z", "Tên giảm dần z-a", "Thời gian đăng ký sớm-muộn", "Thời gian đăng ký muộn-sớm" }));
+        comboSortRegistering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name increase a-z", "Name decrease z-a", "Registration time Early-Late", "Registration time Late-Early" }));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Nhập tên sinh viên: ");
+        jLabel4.setText("Enter student name:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Từ ngày: ");
+        jLabel5.setText("From day:");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Đến ngày: ");
+        jLabel6.setText("To day:");
 
         txtSearchReByRegisterTimeTo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -676,7 +676,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
                     .addGap(61, 61, 61)))
         );
 
-        jTabbedPane1.addTab("QUẢN LÝ ĐĂNG KÝ", jPanel3);
+        jTabbedPane1.addTab("MANAGE REGISTER", jPanel3);
 
         tblCourse.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tblCourse.setModel(new javax.swing.table.DefaultTableModel(

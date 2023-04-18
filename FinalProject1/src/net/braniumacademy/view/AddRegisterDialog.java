@@ -80,35 +80,40 @@ public class AddRegisterDialog extends javax.swing.JDialog implements ActionList
         btnRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("THÊM MỚI SINH VIÊN");
+        setTitle("ADD REGISTER STUDENT SYSTEM");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Thêm mới sinh viên");
+        jLabel1.setText("ADD REGISTER STUDENT");
 
         btnClear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnClear.setText("Xóa dữ liệu");
+        btnClear.setText("CLEAR");
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCancel.setText("Hủy bỏ");
+        btnCancel.setText("CANCEL");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin nhập liệu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Input Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Mã sinh viên: ");
+        jLabel2.setText("Student ID");
 
         txtStudentIdToSearch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Mã môn học: ");
+        jLabel3.setText("Subejct Code");
 
         txtSubjectIdToSearch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         btnSearchStudent.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSearchStudent.setText("Tìm sinh viên");
+        btnSearchStudent.setText("Find Student");
 
         btnSearchSubject.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSearchSubject.setText("Tìm môn học");
+        btnSearchSubject.setText("Find Subject");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -145,35 +150,35 @@ public class AddRegisterDialog extends javax.swing.JDialog implements ActionList
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin đăng ký", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registration Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Mã sinh viên: ");
+        jLabel6.setText("Student ID:");
 
         txtStudentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Họ và tên: ");
+        jLabel7.setText("Full Name:");
 
         txtFullName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         txtSubjectId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("Chuyên ngành: ");
+        jLabel8.setText("Major");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("Mã môn học: ");
+        jLabel9.setText("Subject Code:");
 
         txtMajor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel12.setText("Tên môn học: ");
+        jLabel12.setText("Subject Name:");
 
         txtSubjectName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel13.setText("Thời gian đăng ký: ");
+        jLabel13.setText("Register time:");
 
         txtRegisterTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -199,7 +204,7 @@ public class AddRegisterDialog extends javax.swing.JDialog implements ActionList
                         .addComponent(txtFullName)
                         .addComponent(txtSubjectId)
                         .addComponent(txtMajor, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +237,7 @@ public class AddRegisterDialog extends javax.swing.JDialog implements ActionList
         );
 
         btnRegister.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRegister.setText("Đăng ký");
+        btnRegister.setText("REGISTER");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -275,6 +280,10 @@ public class AddRegisterDialog extends javax.swing.JDialog implements ActionList
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments

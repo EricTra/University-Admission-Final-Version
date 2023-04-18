@@ -822,8 +822,8 @@
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="QU&#x1ea2;N L&#xdd; &#x110;&#x102;NG K&#xdd;">
-                <Property name="tabTitle" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; &#x110;&#x102;NG K&#xdd;"/>
+              <JTabbedPaneConstraints tabName="MANAGE REGISTER">
+                <Property name="tabTitle" type="java.lang.String" value="MANAGE REGISTER"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -881,7 +881,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
+                <Property name="text" type="java.lang.String" value="REFRESH"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
               </Properties>
             </Component>
@@ -899,11 +899,11 @@
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="6" rowCount="0">
-                        <Column editable="false" title="M&#xe3; sinh vi&#xea;n" type="java.lang.Object"/>
-                        <Column editable="false" title="H&#x1ecd; t&#xea;n sinh vi&#xea;n" type="java.lang.Object"/>
-                        <Column editable="false" title="L&#x1edb;p" type="java.lang.Object"/>
-                        <Column editable="false" title="M&#xe3; m&#xf4;n" type="java.lang.Object"/>
-                        <Column editable="false" title="T&#xea;n m&#xf4;n" type="java.lang.Object"/>
+                        <Column editable="false" title="Student ID" type="java.lang.Object"/>
+                        <Column editable="false" title="Full Name" type="java.lang.Object"/>
+                        <Column editable="false" title="Class" type="java.lang.Object"/>
+                        <Column editable="false" title="Subject Code" type="java.lang.Object"/>
+                        <Column editable="false" title="Subject Name" type="java.lang.Object"/>
                         <Column editable="true" title="Th&#x1edd;i gian &#x111;&#x103;ng k&#xfd;" type="java.lang.Object"/>
                       </Table>
                     </Property>
@@ -953,7 +953,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Th&#xea;m &#x111;&#x103;ng k&#xfd;"/>
+                <Property name="text" type="java.lang.String" value="ADD REGISRER"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveRegistering">
@@ -961,15 +961,15 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="X&#xf3;a &#x111;&#x103;ng k&#xfd;"/>
+                <Property name="text" type="java.lang.String" value="DELETE REGISTER"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel10">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="T&#xec;m ki&#x1ebf;m v&#xe0; s&#x1eaf;p x&#x1ebf;p b&#x1ea3;ng &#x111;&#x103;ng k&#xfd;">
-                      <Font PropertyName="font" name="Tahoma" size="14" style="0"/>
+                    <TitledBorder title="Search and sort registration table">
+                      <Font PropertyName="font" name="Tahoma" size="14" style="1"/>
                     </TitledBorder>
                   </Border>
                 </Property>
@@ -1058,7 +1058,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m theo t&#xea;n sinh vi&#xea;n"/>
+                    <Property name="text" type="java.lang.String" value="Search by student name"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rbSearchReByRegisterTime">
@@ -1066,7 +1066,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m theo th&#x1edd;i gian &#x111;&#x103;ng k&#xfd;"/>
+                    <Property name="text" type="java.lang.String" value="Search by register time"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchReByStudentName">
@@ -1081,7 +1081,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#xec;m"/>
+                    <Property name="text" type="java.lang.String" value="SEARCH"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchReByRegisterTimeFrom">
@@ -1096,7 +1096,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p theo: "/>
+                    <Property name="text" type="java.lang.String" value="Sorted by:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="comboSortRegistering">
@@ -1106,10 +1106,10 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
-                        <StringItem index="0" value="T&#xea;n t&#x103;ng d&#x1ea7;n a-z"/>
-                        <StringItem index="1" value="T&#xea;n gi&#x1ea3;m d&#x1ea7;n z-a"/>
-                        <StringItem index="2" value="Th&#x1edd;i gian &#x111;&#x103;ng k&#xfd; s&#x1edb;m-mu&#x1ed9;n"/>
-                        <StringItem index="3" value="Th&#x1edd;i gian &#x111;&#x103;ng k&#xfd; mu&#x1ed9;n-s&#x1edb;m"/>
+                        <StringItem index="0" value="Name increase a-z"/>
+                        <StringItem index="1" value="Name decrease z-a"/>
+                        <StringItem index="2" value="Registration time Early-Late"/>
+                        <StringItem index="3" value="Registration time Late-Early"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -1124,7 +1124,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Nh&#x1ead;p t&#xea;n sinh vi&#xea;n: "/>
+                    <Property name="text" type="java.lang.String" value="Enter student name:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
@@ -1132,7 +1132,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="T&#x1eeb; ng&#xe0;y: "/>
+                    <Property name="text" type="java.lang.String" value="From day:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
@@ -1140,7 +1140,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x110;&#x1ebf;n ng&#xe0;y: "/>
+                    <Property name="text" type="java.lang.String" value="To day:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchReByRegisterTimeTo">
