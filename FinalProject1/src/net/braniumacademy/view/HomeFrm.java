@@ -525,7 +525,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
             },
             new String [] {
-                "Student ID", "Full Name", "Class", "Subject Code", "Subject Name", "Thời gian đăng ký"
+                "Student ID", "Full Name", "Class", "Subject Code", "Subject Name", "Register Time"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -544,13 +544,13 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         btnRemoveRegistering.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnRemoveRegistering.setText("DELETE REGISTER");
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search and sort registration table", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search and Sort Registration ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         rbSearchReByStudentName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchReByStudentName.setText("Search by student name");
+        rbSearchReByStudentName.setText("Search by Student Name");
 
         rbSearchReByRegisterTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        rbSearchReByRegisterTime.setText("Search by register time");
+        rbSearchReByRegisterTime.setText("Search by Register Time");
 
         txtSearchReByStudentName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
