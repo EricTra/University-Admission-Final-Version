@@ -1,6 +1,6 @@
 # University Admission-Final Version
  Manage Student Greenwich Da Nang - By Tra Quang Duy
- ##Final Version: 
+#Final Version: 
 + Have basic CRUD function for Student, Subject, Reigster Management
 + Use English
 + Sort Subject List by Subject Name a-z
