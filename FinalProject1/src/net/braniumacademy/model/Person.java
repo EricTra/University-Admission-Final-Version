@@ -11,11 +11,6 @@ import net.braniumacademy.exception.InvalidEmailException;
 import net.braniumacademy.exception.InvalidNameException;
 import net.braniumacademy.exception.InvalidPersonIdException;
 import net.braniumacademy.exception.InvalidPhoneNumberException;
-
-/**
- *
- * @author braniumacademy <braniumacademy.net>
- */
 public class Person implements Serializable {
 
     private String id;

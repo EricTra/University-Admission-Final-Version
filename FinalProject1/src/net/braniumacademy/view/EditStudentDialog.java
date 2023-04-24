@@ -191,6 +191,7 @@ public class EditStudentDialog extends javax.swing.JDialog implements ActionList
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Student ID:");
 
+        txtStudentId.setEditable(false);
         txtStudentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

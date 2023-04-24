@@ -9,10 +9,6 @@ import net.braniumacademy.exception.InvalidPersonIdException;
 import net.braniumacademy.exception.InvalidPhoneNumberException;
 import net.braniumacademy.exception.InvalidStudentIdException;
 
-/**
- *
- * @author braniumacademy <braniumacademy.net>
- */
 public class Student extends Person {
 
     private String studentId;

@@ -16,10 +16,7 @@ import net.braniumacademy.model.Registering;
 import net.braniumacademy.model.Student;
 import net.braniumacademy.model.Subject;
 
-/**
- *
- * @author braniumacademy <braniumacademy.net>
- */
+
 public class HomeFrm extends javax.swing.JFrame implements ActionListener {
 
     private List<Subject> subjects;
@@ -1103,7 +1100,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
     private void removeSubject() {
         int selectedIndex = tblSubject.getSelectedRow();
         if (selectedIndex > -1) {
-            var msg = "Bạn có chắc chắn muốn xóa bản ghi này không?";
+            var msg = "Are you sure you want to delete this record?";
             int confirm = JOptionPane.showConfirmDialog(rootPane, msg);
             if (confirm == JOptionPane.YES_OPTION) { // or OK_OPTION
                 subjects.remove(selectedIndex);

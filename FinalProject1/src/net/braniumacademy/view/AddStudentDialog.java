@@ -15,10 +15,6 @@ import net.braniumacademy.exception.InvalidStudentIdException;
 import net.braniumacademy.model.Student;
 import net.braniumacademy.model.Subject;
 
-/**
- *
- * @author braniumacademy <braniumacademy.net>
- */
 public class AddStudentDialog extends javax.swing.JDialog implements ActionListener {
 
     private HomeFrm homeFrm;
@@ -429,7 +425,7 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
                     showMessage(msg);
                 }
             } catch (InvalidStudentIdException ex) {
-                var msg = "Ví dụ mã hợp lệ: B25DCCN125";
+                var msg = "Ví dụ mã hợp lệ: GCD210340";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidPersonIdException ex) {
                 var msg = "Ví dụ mã hợp lệ: A2021123123";

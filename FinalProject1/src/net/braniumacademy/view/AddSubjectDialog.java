@@ -244,11 +244,11 @@ public class AddSubjectDialog extends javax.swing.JDialog implements ActionListe
             subject.setKind(type);
             subject.setNumOfLesson(Integer.parseInt(numOfLessonString));
             homeFrm.addSubjectCallback(subject);
-            JOptionPane.showMessageDialog(rootPane, "Thêm môn học thành công!");
+            JOptionPane.showMessageDialog(rootPane, "Add new Subject Success!");
             dispose();
         } else {
             JOptionPane.showMessageDialog(rootPane,
-                    "Các ô nhập liệu không được để trống!");
+                    "Input fields cannot be left blank!");
         }
     }
 }

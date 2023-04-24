@@ -2,10 +2,7 @@ package net.braniumacademy.model;
 
 import java.io.Serializable;
 
-/**
- *
- * @author braniumacademy <braniumacademy.net>
- */
+
 public class Subject implements Serializable {
 
     private int id;
