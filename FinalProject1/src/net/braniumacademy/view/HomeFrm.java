@@ -936,13 +936,13 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
     }
 
     public void addSubjectCallback(Subject subject) {
-        subjects.add(subject);
+        subjects.add(subject); // nhận tham số đầu vào subject
         showSubject(subject);
         saveData(DataController.SUBJECT);
     }
 
     public void addStudentCallback(Student student) {
-        students.add(student);
+        students.add(student); // same
         showStudent(student);
         saveData(DataController.STUDENT);
     }
@@ -1044,7 +1044,7 @@ public class HomeFrm extends javax.swing.JFrame implements ActionListener {
         };
         tableModelSubject.addRow(row);
     }
-
+// Load lại file
     private void loadData() {
         subjects = dataController
                 .<Subject>readDataFromFile(DataController.SUBJECT_FILE);

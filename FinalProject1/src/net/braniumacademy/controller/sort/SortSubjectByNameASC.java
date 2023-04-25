@@ -15,3 +15,7 @@ public class SortSubjectByNameASC implements Comparator<Subject> {
     }
     
 }
+//Ghi đè compare -> so sánh hai đối tượng Subject
+// o1 > o2 -> int dương
+// o1 < o2 -> int âm
+// o1 = o2 -> 0

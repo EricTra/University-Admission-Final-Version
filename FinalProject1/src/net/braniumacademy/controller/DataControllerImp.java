@@ -1,5 +1,5 @@
 package net.braniumacademy.controller;
-
+//Class triển khai
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -34,7 +34,7 @@ import net.braniumacademy.model.Subject;
  * @author braniumacademy <braniumacademy.net>
  */
 public class DataControllerImp implements DataController {
-    
+    //Beta
     @Override
     public boolean isRegisterable(List<Registering> registerings, Student s) {
         int counter = 0;
@@ -44,19 +44,20 @@ public class DataControllerImp implements DataController {
             }
         }
         return counter < MAX_REGISTER;
+        //Beta
     }
-
+//Ghi dữ liệu của kiểu T, tham số data, tên 'fileName'
     @Override
     public <T> void writeToFile(List<T> data, String fileName) {
         try ( FileOutputStream fos = new FileOutputStream(fileName);  ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-            oos.writeObject(data);
+            oos.writeObject(data); // FileOuputStream ghi -> dữ liệu vào file, ObjectOutputStream ghi dữ liệu danh sách data -> đối tượng 
         } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
+            ex.printStackTrace(); // phương thức này sẽ in ra tên lớp, đối tượng, danh sách lỗi
         } catch (IOException ex) {
-            ex.printStackTrace();
+            ex.printStackTrace(); // phương thức này sẽ in ra tên lớp, đối tượng, danh sách lỗi
         }
     }
-
+// Same above
     @Override
     public <T> List<T> readDataFromFile(String fileName) {
         List<T> data = new ArrayList<>();
@@ -77,7 +78,8 @@ public class DataControllerImp implements DataController {
     public void sortSubjectByNameASC(List<Subject> subjects) {
         Collections.sort(subjects, new SortSubjectByNameASC());
     }
-
+ // method sort được gọi -> dựa vào lớp SortSubjectByNameASC để so sánh hai đối tượng subjects
+ // lớp sẽ implements comparator -> định nghĩa so sánh hai đối tượng subjects
     @Override
     public void sortSubjectByNameDESC(List<Subject> subjects) {
         Collections.sort(subjects, new SortSubjectByNameDESC());
@@ -107,7 +109,9 @@ public class DataControllerImp implements DataController {
         }
         return resultList;
     }
-
+/*sử dụng Regex, nghĩa là chuyển chuỗi key thành một biểu thức 
+  chính quy và so sánh nó với tên của từng đối tượng Subject trong danh sách subjects.
+  nếu tìm thấy môt đối tượng Object -> resultList*/
     @Override
     public List<Subject> searchSubjectByLessonRange(List<Subject> subjects,
             int fromVal, int toVal) {

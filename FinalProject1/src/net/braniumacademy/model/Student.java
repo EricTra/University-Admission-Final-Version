@@ -82,14 +82,16 @@ public class Student extends Person {
     public void setSchoolYear(String schoolYear) {
         this.schoolYear = schoolYear;
     }
-
+// hàm băm -> chuỗi giá trị đại điện cho đối tượng ( classifiled Student ID)
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 79 * hash + Objects.hashCode(this.studentId);
         return hash;
     }
-
+    // student ID 1 = 237 +1 = 238 
+    
+// So sánh hai đối tượng object (Student ID)
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

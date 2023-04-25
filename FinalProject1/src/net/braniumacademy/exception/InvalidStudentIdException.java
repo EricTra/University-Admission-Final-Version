@@ -12,7 +12,7 @@ public class InvalidStudentIdException extends Exception {
     }
 
     public InvalidStudentIdException(String invalidStudentId, String message) {
-        super(message);
+        super(message); // gọi constructor của lớp cha -> truyền vào đối số inva.ID -> lưu trữ, truy xuất
         this.invalidStudentId = invalidStudentId;
     }
 

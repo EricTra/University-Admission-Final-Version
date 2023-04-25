@@ -1,5 +1,5 @@
 package net.braniumacademy.controller;
-
+//Interface định nghĩa các phương thức
 import java.util.Date;
 import java.util.List;
 import net.braniumacademy.model.Course;
@@ -20,9 +20,9 @@ public interface DataController {
     String SUBJECT_FILE = "SUBJECT.DAT";
     String STUDENT_FILE = "STUDENT.DAT";
     String REGISTERING_FILE = "STU_REGISTER.DAT";
-
-    <T> void writeToFile(List<T> data, String fileName);
-
+// phương thức ghi dữ liệu vào tập tin, với tham số đầu vào là danh sách các đối tượng và tên tập tin
+    <T> void writeToFile(List<T> data, String fileName); 
+//phương thức đọc dữ liệu từ tập tin, với tham số đầu vào là tên tập tin
     <T> List<T> readDataFromFile(String fileName);
 
     void sortSubjectByNameASC(List<Subject> subjects);

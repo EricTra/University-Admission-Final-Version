@@ -428,19 +428,19 @@ public class AddStudentDialog extends javax.swing.JDialog implements ActionListe
                 var msg = "Ví dụ mã hợp lệ: GCD210340";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidPersonIdException ex) {
-                var msg = "Ví dụ mã hợp lệ: A2021123123";
+                var msg = "Ví dụ mã hợp lệ: 123456789123";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidEmailException ex) {
-                var msg = "Ví dụ email hợp lệ: example@gmail.com";
+                var msg = "Ví dụ email hợp lệ: test@gmail.com";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidPhoneNumberException ex) {
-                var msg = "Ví dụ SĐT hợp lệ: 0988123123";
+                var msg = "Ví dụ SĐT hợp lệ: 0779401473";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidNameException ex) {
                 var msg = "Họ tên chỉ chứa chữ cái và dấu cách.";
                 showMessage(ex.getMessage() + "\n" + msg);
             } catch (InvalidDateOfBirthException ex) {
-                var msg = "Ví dụ ngày sinh hợp lệ: 22/11/2005";
+                var msg = "Ví dụ ngày sinh hợp lệ: 22/11/2003";
                 showMessage(ex.getMessage() + "\n" + msg);
             }
         }
