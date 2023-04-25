@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 
 public class StudentTest {
 
+//Test StudentID có đúng không?
     @Test
     public void testSetStudentIdValid() throws InvalidStudentIdException {
         Student student = new Student();
@@ -18,20 +19,21 @@ public class StudentTest {
         student.setStudentId(validStudentId);
         assertEquals(validStudentId, student.getStudentId());
     }
-
+//Test Student ID sai 
     @Test(expected = InvalidStudentIdException.class)
     public void testSetStudentIdInvalid() throws InvalidStudentIdException {
         Student student = new Student();
         String invalidStudentId = "GCD210-340";
         student.setStudentId(invalidStudentId);
     }
-
+//Test Email Sai
     @Test(expected = InvalidEmailException.class)
     public void testSetEmailInvalid() throws InvalidEmailException {
         Student student = new Student();
         String invalidEmail = "test";
         student.setEmail(invalidEmail);
     }
+    //Test Object có Null không?
         @Test
     public void testEqualsWithNullObject() throws InvalidStudentIdException,
             InvalidPersonIdException, InvalidEmailException,
